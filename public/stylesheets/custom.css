@@ -1,0 +1,418 @@
+.container {
+	width: 750px;
+	z-index: 1;
+}
+body {
+	background: #780a0b;
+}
+
+header {
+	padding-top: 20px;
+}
+
+h1 {
+font-family: Diavlo_LIGHT_II_37, Helvetica, Arial, sans-serif;
+}
+
+h4 {
+font-family: Diavlo_LIGHT_II_37, Helvetica, Arial, sans-serif;
+margin-bottom: -1px;
+margin-top: 15px;
+}
+
+header img {
+	padding: 1em;
+	background: #fff;
+}
+
+section {
+	margin-top: 1em;
+	font-size: 120%;
+	padding: 20px;
+	background: #fff;
+	z-index: 999;
+	margin-bottom: 35px;
+}
+
+section h1 {
+	font-size: 200%;
+}
+
+.likebutton {
+		text-align: center;
+		font-size: 150%;
+		width: 100%;
+	  position: fixed;
+		padding-top:5px;
+		right: 0px;
+		bottom: 0px;
+		margin-top: 5px;
+		z-index: 0;
+		background-color:black;
+		opacity:0.85;
+		border-top-style:solid; 
+		border-top-color:white; 
+		border-top-width:2px;
+		display:none;
+}
+
+.tweet {
+	margin-bottom:-2px;
+}
+
+/* Links */
+
+a {
+	color: #780a0b;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+a: visited {
+	color: #780a0b;
+}
+
+
+/* Navigation */
+@font-face {
+font-family: Delicious-Roman;
+src: url(Delicious-Roman.otf);
+}
+
+@font-face {
+font-family: Diavlo_BOOK_II_37;
+src: url(Diavlo_II_37/Diavlo_LIGHT_II_37.otf);
+}
+
+@font-face {
+font-family: Diavlo_LIGHT_II_37;
+src: url(Diavlo_II_37/Diavlo_LIGHT_II_37.otf);
+}
+
+nav {
+	margin-top: 0px;
+	text-align: right;
+	font-family: Diavlo_BOOK_II_37, Helvetica, Arial, sans-serif;
+	font-size: 150%;
+}
+
+nav {
+	width: 750px;
+	/*background-image: url(../images/navbackground.png);
+	background-repeat: repeat-x;*/
+	background: white;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	white-space: nowrap;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	padding-right:15px;
+}
+
+nav ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0.2 0;
+}
+
+nav ul li a {
+	color: black;
+	padding: 0 5px;
+	padding-bottom: 0px;
+}
+
+nav ul li a:visited {
+	color: black;
+}
+
+nav ul li a:hover {
+	color: #780a0b;
+	text-decoration: none;
+}
+
+/* Sign up button */
+
+a.signup_button {
+	font-family: Diavlo_BOOK_II_37, Helvetica, Arial, sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align:center;
+	width: 190px;
+	color: #fff;
+	background: #000;
+	font-size: 350%;
+	padding: 20px;
+}
+a.signup_button:hover {
+	background: #780a0b;
+}
+
+/* Round corners */
+.round {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 3px 3px 3px #111;
+	-webkit-box-shadow: 3px 3px 3px #111;
+	box-shadow: 3px 3px 3px #111;
+}
+
+.round2 {
+	border:1px solid #000;
+	float:right;
+}
+
+.shadowbottom {
+	-moz-box-shadow: 3px 3px 3px #111;
+	-webkit-box-shadow: 3px 3px 3px #111;
+	box-shadow: 3px 3px 3px #111;
+}
+
+.shadowtop {
+	-moz-box-shadow: -3px -3px 3px #111;
+	-webkit-box-shadow: -3px -3px 3px #111;
+	box-shadow: -3px -3px 3px #111;
+}
+
+/* Footer */
+
+footer {
+	text-align: center;
+	margin-top: 10px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+footer nav {
+	text-align: center;
+}
+
+/* User show page */
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+td.main {
+  width: 70%;
+  padding: 1em;
+}
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background-color: #abc;
+}
+.profile img.gravatar {
+  border: 1px solid #999;
+  margin-bottom: -15px;
+}
+
+/* Form Style */
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+.field_with_errors {
+  margin-top: 10px;
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/*Displaying user list */
+
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}
+
+/*Micropost section*/
+h1.micropost {
+  margin-bottom: 0.3em;
+}
+
+table.microposts {
+  margin-top: 1em;
+}
+
+table.microposts tr {
+  height: 70px;
+}
+
+table.microposts tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.microposts tr td.micropost {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.microposts tr td.micropost span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.microposts {
+  font-size: 80%;
+}
+
+form.new_micropost {
+  margin-bottom: 2em;
+}
+
+form.new_micropost textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+
+/* Proposal Titles List */
+
+h1.proposaltitles {
+	text-align: center;
+  font-size: 150%;
+	margin-bottom: 0.3em;
+}
+
+table.proposaltitles {
+  margin-top: 1em;
+}
+
+table.proposaltitles tr {
+  height: 70px;
+}
+
+table.proposaltitles tr td.gravatar {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  width: 50px;
+}
+
+table.proposaltitles tr td.proposaltitle {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+table.proposaltitles tr td.proposaltitle span.timestamp {
+  display: block;
+  font-size: 85%;
+  color: #666;
+}
+
+div.user_info img {
+  padding-right: 0.1em;
+}
+
+div.user_info a {
+  text-decoration: none;
+}
+
+div.user_info span.user_name {
+  position: absolute;
+}
+
+div.user_info span.proposaltitles {
+  font-size: 80%;
+}
+
+form.new_proposal {
+  margin-bottom: 2em;
+}
+
+form.new_proposal textarea {
+  height: 4em;
+  margin-bottom: 0;
+}
+
+
+
+#proposal_content {
+	height: 300px;
+	width: 90%;	
+}
+
+
+input.delete_button {
+font-size: 10;
+font-family: Diavlo_BOOK_II_37, Helvetica, Arial, sans-serif;
+color: #ff0000;
+background: transparent;
+border-style: none;
+display: inline;
+}
+
+.button_to div {
+display: inline;
+}
+
+.button_to {
+display: inline;
+}
