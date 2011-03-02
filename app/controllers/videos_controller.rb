@@ -3,4 +3,8 @@ class VideosController < ApplicationController
 		@title = "Add new video"
   end
 
+	def show
+    @video = Video.find(params[:id])
+  end
+
 end
