@@ -49,20 +49,45 @@ $(document).ready(function(){
 var geocoder;
 var map;
 var marker;
-   
+
 function initializemaps(){
 //MAP
-  var latlng = new google.maps.LatLng(10.681999,19.675277);
+  var latlng = new google.maps.LatLng(51.420466,6.772835);
   var options = {
-    zoom: 1,
+    zoom: 17,
     center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
+    mapTypeId: google.maps.MapTypeId.SATELLITE
   };
+	map = new google.maps.Map(document.getElementById("map_canvas"), options);
+	var marker = new google.maps.Marker({
+    position: latlng,
+    title: 'Point A',
+    map: map,
+    draggable: true
+  });
+	// Update current position info.
+  updateMarkerPosition(latLng);
+  geocodePosition(latLng);
+  
+  // Add dragging event listeners.
+  google.maps.event.addListener(marker, 'dragstart', function() {
+    updateMarkerAddress('Dragging...');
+  });
+  
+  google.maps.event.addListener(marker, 'drag', function() {
+    updateMarkerStatus('Dragging...');
+    updateMarkerPosition(marker.getPosition());
+  });
+  
+  google.maps.event.addListener(marker, 'dragend', function() {
+    updateMarkerStatus('Drag ended');
+    geocodePosition(marker.getPosition());
+  });
        
-  map = new google.maps.Map(document.getElementById("map_canvas"), options);
+  
 
 		
-	var latlng = new google.maps.LatLng(10.681999,19.675277);
+	var latlng = new google.maps.LatLng(51.420466,6.772835);
      
   //GEOCODER
   geocoder = new google.maps.Geocoder();

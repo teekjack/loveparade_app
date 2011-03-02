@@ -1,2 +1,40 @@
-<h1>Videos#new</h1>
-<p>Find me in app/views/videos/new.html.erb</p>
+
+
+<h1>Add Video</h1>
+<h5>- Try to use original YouTube filenames/urls to avoid duplication! - </h5>
+<!--#  filename    :string(255)
+#  latitude    :string(255)
+#  longitude   :string(255)
+#  description :text
+#  url         :string(255)-->
+
+<table>
+	<tr>
+	<td>
+<%= form_for(@video) do |f| %>
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <div class="field">
+		Lat:<%= f.text_field :latitude%><br/>
+    Long:<%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Add" %>
+  </div>
+<% end %>
+	</td>
+	<td>
+		<div id="map_canvas" style="width:400px; height:600px; border-style:solid; border-color:#3b3b3b; border-width:3px;"></div>
+	</td>
+	</tr>
+</table>
