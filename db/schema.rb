@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110302145600) do
+ActiveRecord::Schema.define(:version => 20110302200850) do
 
   create_table "videos", :force => true do |t|
     t.string   "filename"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110302145600) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time"
   end
 
   add_index "videos", ["filename"], :name => "index_videos_on_filename", :unique => true

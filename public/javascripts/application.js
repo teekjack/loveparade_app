@@ -3,45 +3,7 @@
 $(document).ready(function(){
 		
 	initializemaps();
-                 
-  $(function() {
-    $("#micropost_location").autocomplete({
-      //This bit uses the geocoder to fetch address values
-      source: function(request, response) {
-        geocoder.geocode( {'address': request.term }, function(results, status) {
-          response($.map(results, function(item) {
-						for(i=0; i < item.types.length; i++){						
-							if(item.types[i] == 'country'){
-            	return {
-              	label:  item.formatted_address,
-              	value: item.formatted_address,
-              	latitude: item.geometry.location.lat(),
-              	longitude: item.geometry.location.lng()
-            	}
-							break;
-							}
-						}
-          }));
-        })
-      },
-      //This bit is executed upon selection of an address
-      select: function(event, ui) {
-        $("#micropost_latitude").val(ui.item.latitude);
-        $("#micropost_longitude").val(ui.item.longitude);
-				//$("#micropost_location").val(ui.item.label);
-
-        var location = new google.maps.LatLng(ui.item.latitude, ui.item.longitude);
-        marker.setPosition(location);
-        map.setCenter(location);
-      }
-    });
-  });
-
-	if ( $("#showpage").length ) {
- 		placemarker();
-	}
-
-
+              
 });
 
   
@@ -88,23 +50,18 @@ function initializemaps(){
     map: map,
     draggable: true
   });
-	// Update current position info.
-  updateMarkerPosition(latLng);
-  geocodePosition(latLng);
   
   // Add dragging event listeners.
   google.maps.event.addListener(marker, 'dragstart', function() {
-    updateMarkerAddress('Dragging...');
   });
   
   google.maps.event.addListener(marker, 'drag', function() {
-    updateMarkerStatus('Dragging...');
-    updateMarkerPosition(marker.getPosition());
-  });
+   });
   
   google.maps.event.addListener(marker, 'dragend', function() {
-    updateMarkerStatus('Drag ended');
-    geocodePosition(marker.getPosition());
+    pos = marker.getPosition();
+		$("#video_latitude").val(pos.lat());
+		$("#video_longitude").val(pos.lng());
   });
        
   

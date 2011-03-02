@@ -1,0 +1,14 @@
+<% if @video.errors.any? %>
+  <div id="error_explanation" style="width:400px;">
+    <h2><%= pluralize(@video.errors.count, "error") %> 
+        prohibited this video from being saved:</h2>
+    <p>There were problems with the following fields:</p>
+    <ul>
+    <% @video.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+

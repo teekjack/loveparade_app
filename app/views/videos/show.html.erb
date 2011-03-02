@@ -1,1 +1,17 @@
 <h1> <%= @title %></h1>
+
+<table>
+<tr>
+<td>Filename:</td><td> <%= @video.filename %></td>
+</tr>
+<tr>
+<td>Description:</td><td> <%= @video.description %></td>
+</tr>
+<tr>
+<td>Timespan:</td><td> <%= @video.time %></td>
+</tr>
+<tr>
+<td>Url:</td><td> <%=link_to @video.url, @video.url %></td>
+</tr>
+</table>
+
