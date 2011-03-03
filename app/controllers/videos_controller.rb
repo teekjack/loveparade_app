@@ -4,7 +4,7 @@ class VideosController < ApplicationController
 	def new
 		@video = Video.new
 		@title = "Add new video"
-		@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"]   
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"]   
 	end
 
 	def create
@@ -14,7 +14,7 @@ class VideosController < ApplicationController
       redirect_to @video
     else
       @title = "Add Video"
-			@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"]
+			@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
       render 'new'
     end
   end
@@ -22,7 +22,7 @@ class VideosController < ApplicationController
 	def edit
     @video = Video.find(params[:id])
     @title = "Edit Video"
-		@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"] 
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
   end
 
 	def update
@@ -32,7 +32,7 @@ class VideosController < ApplicationController
       redirect_to @video
     else
       @title = "Edit Video"
-			@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"] 
+			@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
       render 'edit'
     end
   end
@@ -46,7 +46,7 @@ class VideosController < ApplicationController
 	def index
     @title = "All Videos"
     @videos = Video.paginate(:page => params[:page])
-		@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"] 
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
   end
 
 	def indexcsv
@@ -60,7 +60,7 @@ class VideosController < ApplicationController
 	def show
     @video = Video.find(params[:id])
 		@title = @video.filename
-		@timespans = ["","15:30-15:40","15:40-15:50","15:50-16:00","16:00-16:10","16:10-16:20","16:20-16:30","16:30-16:40","16:40-16:50","16:50-17:00","17:00-17:10","17:10-17:20","17:20-17:30"]
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
   end
 
 	def render_csv(filename = nil)
