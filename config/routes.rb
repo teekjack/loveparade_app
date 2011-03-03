@@ -13,6 +13,7 @@ LoveparadeApp::Application.routes.draw do
 	match 'map1601', :to => 'pages#map1601'
 	match 'map1631', :to => 'pages#map1631'
 	match 'map1701', :to => 'pages#map1701'
+	match 'csv', :to => 'videos#indexcsv'
 	root :to => 'pages#home'
 
 end

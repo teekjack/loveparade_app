@@ -1,5 +1,5 @@
 <h1>All Videos</h1>
-
+<%= link_to "Export Report", csv_path(:csv) %>
 <%= will_paginate %>
 <table class="users">
   <% @videos.each do |video| %>
