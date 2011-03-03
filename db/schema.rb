@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110303210904) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "time"
+    t.integer  "time",        :limit => 255
   end
 
   add_index "videos", ["filename"], :name => "index_videos_on_filename", :unique => true
