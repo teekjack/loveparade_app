@@ -1,0 +1,45 @@
+
+
+<h1 style="display:inline;">Add Video</h1><h5 style="display:inline;"> - Try to use original YouTube filenames/urls to avoid duplication! - </h5>
+<!--#  filename    :string(255)
+#  latitude    :string(255)
+#  longitude   :string(255)
+#  description :text
+#  url         :string(255)-->
+
+<table>
+	<tr>
+	<td>
+<%= form_for(@video) do |f| %>
+	<%= render 'shared/error_messages' %>
+  <div class="field">
+    <%= f.label :filename %><br />
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :style=>"height:50px;" %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+	<div class="field">
+		<%= f.label :time %><br />
+    <%= f.select :time, @timespans %>			
+  </div>
+  <div class="field">
+		(Automatically filled in using the GoogleMaps marker ->)
+		<%= f.text_field :latitude%> - Lat.<br/>
+    <%= f.text_field :longitude %> - Long.
+  </div>
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>
+	</td>
+	<td>
+		<div id="map_canvas" style="width:400px; height:500px; border-style:solid; border-color:#3b3b3b; border-width:3px;"></div>
+	</td>
+	</tr>
+</table>

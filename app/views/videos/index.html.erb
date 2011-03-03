@@ -1,0 +1,9 @@
+<h1>All Videos</h1>
+
+<table class="users">
+  <% @videos.each do |video| %>
+    <tr>
+		<td><%= link_to video.filename, video %></td><td><%= video.time %></td>
+    </tr>
+  <% end %>
+</table>
