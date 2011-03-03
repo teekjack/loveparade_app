@@ -53,7 +53,7 @@ background-image:url(../images/deletemouseover.png);
 /* style the links for the top level */
 .menu a, .menu a:visited {display:block;font-size:15px;color:white; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
 .menu div {display:block;font-size:15px;color:white; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
-.menu a.two, .menu a.two:visited {display:block;font-size:15px;color:red; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
+.menu a.two, .menu a.two:visited {display:block;font-size:15px;color:red; width:100px; height:30px; background:black; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
 
 /* style the second level background */
 .menu ul ul a.drop, .menu ul ul a.drop:visited {background:black;}
