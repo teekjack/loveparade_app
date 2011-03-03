@@ -15,7 +15,7 @@
 
 class Video < ActiveRecord::Base
 
-	attr_accessible :filename, :latitude, :longitude, :description, :url
+	attr_accessible :filename, :latitude, :longitude, :description, :url, :time
 
   validates :filename,  :presence => true,
 											  :uniqueness => true

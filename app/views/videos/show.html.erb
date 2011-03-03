@@ -8,7 +8,7 @@
 <td>Description:</td><td> <%= @video.description %></td>
 </tr>
 <tr>
-<td>Timespan:</td><td> <%= @video.time %></td>
+<td>Timespan:</td><td> <%= @video.time.to_s %></td>
 </tr>
 <tr>
 <td>Url:</td><td> <%=link_to @video.url, @video.url %></td>
