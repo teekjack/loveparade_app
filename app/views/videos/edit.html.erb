@@ -25,8 +25,11 @@
     <%= f.text_field :url %>
   </div>
 	<div class="field">
-		<%= f.label :time %><br />
-    <%= f.select :time, @timespans %>			
+		<%= f.label "Approximate Time Video was taken (24hr clock)" %><br />
+    <%= f.text_field :time %>
+		<script type="text/javascript">
+		$("#video_time").timeEntry({show24Hours: true, minTime : '1530', maxTime : '1800', separator: '' });
+		</script>
   </div>
   <div class="field">
 		(Automatically filled in using the GoogleMaps marker ->)
