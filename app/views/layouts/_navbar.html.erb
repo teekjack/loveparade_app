@@ -1,0 +1,20 @@
+<div class="container" style="position:relative; top:0px; z-index: 10;">
+<div class="menu">
+	<ul>
+		<li><%= link_to "HOME", root_path%></li>
+		<li><div>|</div></li>	
+		<li><%= link_to "VIDEO INDEX", videos_path%></li>
+    <li><%= link_to "MAP ALL", "#"%></li>
+		<li><%= link_to "TIME PERIOD MAPS", "#" %>
+			<ul>			
+			<li><%= link_to @timespans[1], "#" %></li>
+			<li><%= link_to @timespans[2], "#" %></li>
+			<li><%= link_to @timespans[3],"#"%></li>
+			<li><%= link_to @timespans[4], "#" %></li>
+			</ul>
+		</li>
+		<li><div>|</div></li>
+		<li><%= link_to "ADD VIDEO", new_path%></li>
+	</ul>
+</div>
+</div>

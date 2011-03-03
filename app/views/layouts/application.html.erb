@@ -9,6 +9,9 @@
   </head>
   <body>
 		<header></header>
+		<div style="position:absolute; top:0px; background:black; width:100%; opacity:0.7; height:29px; z-index:2;">
+						<%= render 'layouts/navbar' %> 
+		</div>
 		<div class="container">
 			<section class="round">
 				<% flash.each do |key, value| %>

@@ -1,5 +1,12 @@
 <h1> <%= @title %></h1>
-
+<div style="float:right;"><br/><span class="content"><%= button_to "", edit_video_path(@video), :method=>'get', :title => "edit",
+																		 :class => 'edit_button'%></span>
+							<span class="content"><%= button_to "", @video, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => "delete",
+																		 :class => 'deletebutton',
+'onclick'=>"return confirm('Are you sure?')" %></span>
+				</div>
 <table>
 <tr>
 <td>Filename:</td><td> <%= @video.filename %></td>
@@ -14,4 +21,5 @@
 <td>Url:</td><td> <%=link_to @video.url, @video.url %></td>
 </tr>
 </table>
+
 

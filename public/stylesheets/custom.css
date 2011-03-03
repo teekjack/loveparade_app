@@ -10,6 +10,77 @@ header {
 	padding-top: 20px;
 }
 
+.edit_button {
+background:transparent;
+background-image: url(../images/edit.png);
+padding:5px;
+border-style:none;
+margin-left: auto;
+margin-right: auto;
+display: inline;
+text-align:center;
+width:20px;
+height:20px;
+}
+
+.edit_button:hover{
+background-image:url(../images/editmouseover.png);
+}
+
+.deletebutton {
+background:transparent;
+background-image:url(../images/delete.png);
+padding:5px;
+border-style:none;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+width:20px;
+height:20px;
+}
+
+.deletebutton:hover{
+background-image:url(../images/deletemouseover.png);
+}
+
+.menu {width:600px; height:32px; position:relative; z-index:100; font-family:arial, sans-serif;}
+/* remove all the bullets, borders and padding from the default list styling */
+.menu ul {padding:0;margin:0;list-style-type:none;}
+.menu ul ul {width:auto;}
+/* float the list to make it horizontal and a relative positon so that you can control the dropdown menu positon */
+.menu li {float:left;width:auto;position:relative;}
+/* style the links for the top level */
+.menu a, .menu a:visited {display:block;font-size:15px;color:white; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
+.menu div {display:block;font-size:15px;color:white; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
+.menu a.two, .menu a.two:visited {display:block;font-size:15px;color:red; width:auto; height:30px; background:transparent; padding-left:10px; padding-right:10px; line-height:29px; font-weight:bold;}
+
+/* style the second level background */
+.menu ul ul a.drop, .menu ul ul a.drop:visited {background:black;}
+/* style the second level hover */
+.menu ul ul li:hover {background:black;}
+.menu ul ul a.drop:hover{background-color:black; color:#cbcbcb;}
+.menu ul ul :hover > a.drop {background-color:black; color:#cbcbcb;}
+
+/* hide the sub levels and give them a positon absolute so that they take up no room */
+.menu ul ul {display:none; float:left; position:absolute;height:0;top:27px;left:0; width:0px;border-top:1px solid #000;}
+
+/* style the table so that it takes no ppart in the layout - required for IE to work */
+.menu table {position:absolute; top:0; left:0; border-collapse:collapse;;}
+
+/* style the second level links */
+.menu ul ul a, .menu ul ul a:visited {background:black; opacity:0.95 color:#fff; height:auto; line-height:1em; padding:5px 10px; width:100px;}
+
+/* style the top level hover */
+.menu a:hover, .menu ul ul a:hover{color:#3b3b3b; background:transparent;}
+.menu :hover > a, .menu ul ul :hover > a {color:#3b3b3b; background:transparent;}
+
+.menu a.two:hover, .menu ul ul a:hover{color:#3b3b3b; background:transparent;}
+.menu :hover > a.two, .menu ul ul :hover > a.two {color:#3b3b3b; background:transparent;}
+
+/* make the second level visible when hover on first level list OR link */
+.menu ul li:hover ul,
+.menu ul a:hover ul{display:block;}
+
 h1{
 font-family: Delicious-Roman, Helvetica, Arial, sans-serif;
 color: #3b3b3b;

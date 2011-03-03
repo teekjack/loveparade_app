@@ -1,9 +1,18 @@
 <h1>All Videos</h1>
 
+<%= will_paginate %>
 <table class="users">
   <% @videos.each do |video| %>
     <tr>
-		<td><%= link_to video.filename, video %></td><td><%= video.time %></td>
+		<td><%= link_to video.filename, video %></td><td><%= video.time %></td><td><div style="float:right;"><br/><span class="content"><%= button_to "", edit_video_path(video), :method=>'get', :title => "edit",
+																		 :class => 'edit_button'%></span>
+							<span class="content"><%= button_to "", video, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => "delete",
+																		 :class => 'deletebutton',
+'onclick'=>"return confirm('Are you sure?')" %></span>
+				</div></td>
     </tr>
   <% end %>
 </table>
+<%= will_paginate %>

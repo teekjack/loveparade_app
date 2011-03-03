@@ -36,14 +36,22 @@ class VideosController < ApplicationController
     end
   end
 
+	def destroy
+    Video.find(params[:id]).destroy
+    flash[:success] = "Video destroyed."
+    redirect_to videos_path
+  end
+
 	def index
     @title = "All Videos"
-    @videos = Video.all
+    @videos = Video.paginate(:page => params[:page])
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
   end
 
 	def show
     @video = Video.find(params[:id])
 		@title = @video.filename
+		@timespans = ["","15:30-16:00","16:01-16:30","16:31-17:00","17:01-17:30"] 
   end
 
 end
