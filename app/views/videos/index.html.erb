@@ -2,6 +2,7 @@
 <%= link_to "Export Report", csv_path(:csv) %>
 <%= will_paginate %>
 <table class="users">
+	 	<tr><td>Filename</td><td>Time</td></tr>
   <% @videos.each do |video| %>
     <tr>
 		<td><%= link_to video.filename, video %></td><td><%= video.time %></td><td><div style="float:right;"><br/><span class="content"><%= button_to "", edit_video_path(video), :method=>'get', :title => "edit",
