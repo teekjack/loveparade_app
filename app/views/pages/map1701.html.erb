@@ -1,2 +1,47 @@
+<script type="text/javascript">
+function placemarker(){
+	var image = new google.maps.MarkerImage(
+	  '/images/marker-images/image.png',
+	  new google.maps.Size(20,21),
+	  new google.maps.Point(0,0),
+	  new google.maps.Point(10,21)
+	);
+
+	var shadow = new google.maps.MarkerImage(
+	  '/images/marker-images/shadow.png',
+	  new google.maps.Size(34,21),
+	  new google.maps.Point(0,0),
+	  new google.maps.Point(10,21)
+	);
+
+	var shape = {
+	  coord: [17,0,17,1,17,2,18,3,19,4,19,5,19,6,19,7,19,8,19,9,19,10,19,11,18,12,18,13,18,14,18,15,18,16,18,17,18,18,18,19,17,20,3,20,3,19,3,18,3,17,3,16,3,15,1,14,1,13,1,12,0,11,0,10,0,9,0,8,0,7,0,6,1,5,1,4,4,3,3,2,3,1,4,0,17,0],
+  type: 'poly'
+	};
+					var marker = new Array();
+			
+			<% @indexcounter = 0 %>		
+			<% @locations.each do |c| %>                                				
+					var location = new google.maps.LatLng(<%=c.latitude%>, <%=c.longitude%>);
+					
+   				marker[<%=@indexcounter%>] = new google.maps.Marker({
+								icon: image,
+  							shadow: shadow,
+  							shape: shape,        				
+								map: map,
+        				position: location,
+								title:"<%= c.filename %>, approx. <%=c.time%>"
+								});
+					
+					google.maps.event.addListener(marker[<%=@indexcounter%>], 'click', function() {
+						window.location.href = "<%=c.url%>";
+					});
+					<% @indexcounter += 1 %>
+			<% end %>
+                                     
+				}; 		
+</script>
+
 <h1><%= @title %></h1>
-<p>YouTube and other videos from the Love Parade crowd disaster organized geographically and by time</p>
+
+<div id="showpage"><div id="map_canvas" style="width:600px; height:600px; border-style:solid; border-color:#3b3b3b; border-width:3px;"></div></div>
