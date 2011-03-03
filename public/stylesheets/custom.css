@@ -10,6 +10,7 @@ header {
 	padding-top: 20px;
 }
 
+
 .edit_button {
 background:transparent;
 background-image: url(../images/edit.png);
@@ -147,7 +148,7 @@ section h1 {
 /* Links */
 
 a {
-	color: black;
+	color: #bf1e44;
 	text-decoration: none;
 }
 
