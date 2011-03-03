@@ -4,13 +4,13 @@
 		<li><%= link_to "HOME", root_path%></li>
 		<li><div>|</div></li>	
 		<li><%= link_to "VIDEO INDEX", videos_path%></li>
-    <li><%= link_to "MAP ALL", "#"%></li>
+    <li><%= link_to "MAP ALL", mapall_path%></li>
 		<li><%= link_to "TIME PERIOD MAPS", "#" %>
 			<ul>			
-			<li><%= link_to @timespans[1], "#" %></li>
-			<li><%= link_to @timespans[2], "#" %></li>
-			<li><%= link_to @timespans[3],"#"%></li>
-			<li><%= link_to @timespans[4], "#" %></li>
+			<li><%= link_to "15:30-16:00", map1530_path %></li>
+			<li><%= link_to "16:01-16:30", map1601_path %></li>
+			<li><%= link_to "16:31-17:00", map1631_path%></li>
+			<li><%= link_to "17:01-17:30", map1701_path %></li>
 			</ul>
 		</li>
 		<li><div>|</div></li>
