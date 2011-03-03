@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110302144909
+# Schema version: 20110303210904
 #
 # Table name: videos
 #
@@ -11,6 +11,7 @@
 #  url         :string(255)
 #  created_at  :datetime
 #  updated_at  :datetime
+#  time        :integer
 #
 
 class Video < ActiveRecord::Base
