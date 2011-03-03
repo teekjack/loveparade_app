@@ -14,7 +14,7 @@ class PagesController < ApplicationController
 
 	def map1530
 		@title = "15:30-15:39"
-		@locations = Video.where("videos.time < 1540 AND videos.time >= 1530")
+		@locations = Video.where(:time => 1530..1539)
 		render 'maptimes'
 	end
 
