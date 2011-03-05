@@ -30,7 +30,7 @@ function initializemaps(){
 //MAP
   var latlng = new google.maps.LatLng(51.420466,6.772835);
   var options = {
-    zoom: 17,
+    zoom: 18,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.SATELLITE
   };
