@@ -41,7 +41,7 @@ class VideosController < ApplicationController
 
 	def index
     @title = "All Videos"
-    @videos = Video.paginate(:page => params[:page])
+    @videos = Video.order("videos.time ASC").paginate(:page => params[:page])
   end
 
 	def indexcsv
