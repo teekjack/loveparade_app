@@ -28,9 +28,9 @@ var marker;
    
 function initializemaps(){
 //MAP
-  var latlng = new google.maps.LatLng(51.420466,6.772405);
+  var latlng = new google.maps.LatLng(51.420466,6.772605);
   var options = {
-    zoom: 18,
+    zoom: 19,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.SATELLITE
   };
