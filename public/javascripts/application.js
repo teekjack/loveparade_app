@@ -38,7 +38,7 @@ function initializemaps(){
   map = new google.maps.Map(document.getElementById("map_canvas"), options);
 
 		
-	var latlng = new google.maps.LatLng(51.420466,6.772835);
+	var latlng = new google.maps.LatLng(51.420466,6.772805);
      
   //GEOCODER
   geocoder = new google.maps.Geocoder();
