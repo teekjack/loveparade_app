@@ -2,11 +2,11 @@
 <%= link_to "Export Report (tab separated)", csv_path(:csv) %>
 <%= will_paginate %>
 <table class="users">
-	 	<tr><td><strong>Filename</strong></td><td><strong>Description</strong></td><td><strong>Approx. Time</strong></td></tr>
+	 	<tr><td><strong>Filename</strong></td><td><strong>Description</strong></td><td><strong>Approx. Time</strong></td><td><strong>Video</strong></td><td></td></tr>
   <% @videos.each do |video| %>
     <tr>
-		<td><%= link_to video.filename, video %></td><td><%= wrap(RedCloth.new(video.description).to_html) %></td><td><%= video.time %></td><td><div style="float:right;"><br/><span class="content"><%= button_to "", edit_video_path(video), :method=>'get', :title => "edit",
-																		 :class => 'edit_button'%></span>
+		<td style="width:100px;"><%= link_to video.filename, video %></td><td><%= wrap(RedCloth.new(video.description).to_html) %></td><td><%= video.time %></td><td><%= link_to "view", video.url %></td><td><div style="float:right;"><span class="content"><%= button_to "", edit_video_path(video), :method=>'get', :title => "edit",
+																		 :class => 'edit_button'%></span><br/>
 							<span class="content"><%= button_to "", video, :method => :delete,
                                      :confirm => "You sure?",
                                      :title => "delete",
