@@ -54,7 +54,7 @@ class VideosController < ApplicationController
 	 # example action to return the contents
   # of a table in CSV format
   def indexcsv
-    @videos = Video.all
+    @videos = Video.order("videos.time ASC")
     respond_to do |wants|
 		  wants.csv do
 		    render_csv("videos-#{Time.now.strftime("%Y%m%d")}")
