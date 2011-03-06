@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
 	require 'fastercsv'
 	require 'cgi'
+	require 'RedCloth'
 
 	def new
 		@video = Video.new

@@ -1,7 +1,7 @@
-Filename	Time	URL
+Filename	Description	Time	URL
 <%= FasterCSV.generate(:col_sep=>"\t") do |csv|
   @videos.each do |video|
-    csv << [ h(video.filename),video.time, video.url]
+    csv << [ wrap(video.filename),wrap(video.description),video.time, video.url]
   end
 end %>
 
