@@ -1,7 +1,6 @@
 LoveparadeApp::Application.routes.draw do
-  get "users/new"
 
- 	resources :videos
+ 	resources :videos, :users
 
   get "pages/home"
 
