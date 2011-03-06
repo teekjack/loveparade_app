@@ -1,6 +1,7 @@
-Filename, Description, Time, Link
+Filename, Description, Time, URL
 <%= generate_csv do |csv|
-  @videos.each do |video|
-    csv << [ video[:filename], video[:description], video[:time], video[:link] ]
+  @videos.each do |user|
+    csv << [ video.filename, video.description, video.time, video.url]
   end
 end %>
+

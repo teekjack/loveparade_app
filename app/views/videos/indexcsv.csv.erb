@@ -1,9 +1,7 @@
-<% headers = ["Filename", "Description", "Time", "Url"] %>
-<%= CSV.generate_line(headers, '&') %>
-<% @videos.each do |video| %>
-<% row = [ video.filename,
-            simple_format(video.description),
-            video.time,
-            video.url] %>
-<%= CSV.generate_line(row, '&') %>
-<% end %>
+Filename	Time	URL
+<%= FasterCSV.generate(:col_sep=>"\t") do |csv|
+  @videos.each do |video|
+    csv << [ h(video.filename),video.time, video.url]
+  end
+end %>
+

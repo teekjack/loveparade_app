@@ -26,7 +26,6 @@ LoveparadeApp::Application.routes.draw do
 	match 'map1740', :to => 'pages#map1740'
 	match 'map1750', :to => 'pages#map1750'
 
-
 	match 'addadmin', :to => 'users#new'
 
 	match 'csv', :to => 'videos#indexcsv'
