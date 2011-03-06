@@ -30,7 +30,7 @@ function placemarker(){
   							shape: shape,        				
 								map: map,
         				position: location,
-								title:"<%= c.filename %>, approx. <%=c.time%>"
+								title:"TITLE: <%= c.filename %>, APPROX. TIME: <%=c.time%>"
 								});
 					
 					google.maps.event.addListener(marker[<%=@indexcounter%>], 'click', function() {
