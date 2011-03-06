@@ -10,17 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110303210904) do
+ActiveRecord::Schema.define(:version => 20110306133239) do
 
-  create_table "videos", :force => true do |t|
-    t.string   "filename"
-    t.string   "latitude"
-    t.string   "longitude"
-    t.text     "description"
-    t.string   "url"
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "time",        :limit => 255
+    t.string   "encrypted_password"
+  end
+
+  add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string    "filename"
+    t.string    "latitude"
+    t.string    "longitude"
+    t.text      "description"
+    t.string    "url"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "time"
   end
 
   add_index "videos", ["filename"], :name => "index_videos_on_filename", :unique => true

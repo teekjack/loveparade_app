@@ -1,4 +1,6 @@
 LoveparadeApp::Application.routes.draw do
+  get "users/new"
+
  	resources :videos
 
   get "pages/home"
@@ -26,6 +28,7 @@ LoveparadeApp::Application.routes.draw do
 	match 'map1750', :to => 'pages#map1750'
 
 
+	match 'addadmin', :to => 'users#new'
 
 	match 'csv', :to => 'videos#indexcsv'
 	root :to => 'pages#home'
