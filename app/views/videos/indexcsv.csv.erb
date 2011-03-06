@@ -1,10 +1,9 @@
 <% headers = ["Filename", "Description", "Time", "Url"] %>
-<% options = {:col_sep => "$$"} %>
-<%= CSV.generate_line(headers, '~') %>
+<%= CSV.generate_line(headers, '&') %>
 <% @videos.each do |video| %>
 <% row = [ video.filename,
             video.description.to_s,
             video.time,
             video.url] %>
-<%= CSV.generate_line(row, '~') %>
+<%= CSV.generate_line(row, '&') %>
 <% end %>
