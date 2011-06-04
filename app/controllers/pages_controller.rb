@@ -31,73 +31,73 @@ class PagesController < ApplicationController
 	end
 
 	def map1600
-		@title = "16:00-1609"
+		@title = "16:00-16:09"
 		@locations = Video.find(:all, :conditions => {:time => 1600..1609})
 		render 'maptimes'
 	end
 	
 	def map1610
-		@title = "16:10-1619"
+		@title = "16:10-16:19"
 		@locations = Video.find(:all, :conditions => {:time => 1610..1619})
 		render 'maptimes'
 	end
 
 	def map1620
-		@title = "16:20-1629"
+		@title = "16:20-16:29"
 		@locations = Video.find(:all, :conditions => {:time => 1620..1629})
 		render 'maptimes'
 	end
 
 	def map1630
-		@title = "16:30-1639"
+		@title = "16:30-16:39"
 		@locations = Video.find(:all, :conditions => {:time => 1630..1639})
 		render 'maptimes'
 	end
 
 	def map1640
-		@title = "16:40-1649"
+		@title = "16:40-16:49"
 		@locations = Video.find(:all, :conditions => {:time => 1640..1649})
 		render 'maptimes'
 	end
 
 	def map1650
-		@title = "16:50-1659"
+		@title = "16:50-16:59"
 		@locations = Video.find(:all, :conditions => {:time => 1650..1659})
 		render 'maptimes'
 	end
 
 	def map1700
-		@title = "17:00-1709"
+		@title = "17:00-17:09"
 		@locations = Video.find(:all, :conditions => {:time => 1700..1709})
 		render 'maptimes'
 	end
 
 	def map1710
-		@title = "17:10-1719"
+		@title = "17:10-17:19"
 		@locations = Video.find(:all, :conditions => {:time => 1710..1719})
 		render 'maptimes'
 	end
 
 	def map1720
-		@title = "17:20-1729"
+		@title = "17:20-17:29"
 		@locations = Video.find(:all, :conditions => {:time => 1720..1729})
 		render 'maptimes'
 	end
 
 	def map1730
-		@title = "17:30-1739"
+		@title = "17:30-17:39"
 		@locations = Video.find(:all, :conditions => {:time => 1730..1739})
 		render 'maptimes'
 	end
 
 	def map1740
-		@title = "17:40-1749"
+		@title = "17:40-17:49"
 		@locations = Video.find(:all, :conditions => {:time => 1740..1749})
 		render 'maptimes'
 	end
 
 	def map1750
-		@title = "17:50-1759"
+		@title = "17:50-17:59"
 		@locations = Video.find(:all, :conditions => {:time => 1750..1759})
 		render 'maptimes'
 	end
